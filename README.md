@@ -1,5 +1,6 @@
-# Download JSON-server
+# start
+Download JSON-server
 
-# Run: npx json-server --watch db.json --port3001
+Run: npx json-server --watch db.json --port3001
 
-# Run app: npm run start
+Run app: npm run start
