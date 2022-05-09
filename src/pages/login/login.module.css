@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.nav {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  column-gap: 10px;
+  padding: 0 20px;
+  width: 100%;
+  min-height: 60px;
+  background-color: teal;
+  border-radius: 10px;
+}
+.link {
+  font-weight: 500;
+  text-decoration: none;
+  color: white;
+}
+.mainBlock {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-top: 20px;
+  width: 70%;
+}
+.headingOne {
+  align-self: center;
+  margin: 0;
+}
+.form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 10px;
+  padding: 20px;
+}
+
+.input {
+  display: flex;
+  width: 50%;
+  min-height: 30px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid teal;
+}

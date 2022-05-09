@@ -1,0 +1,57 @@
+.editBlock {
+  position: fixed;
+  margin: 0 auto;
+  top: 20%;
+  left: 50%;
+  display: none;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 20px;
+  padding: 20px;
+  margin: 0 auto;
+  width: 45%;
+  min-height: 250px;
+  box-shadow: 0 0 10px grey;
+  border-radius: 10px;
+  background-color: white;
+  z-index: 1;
+  transform: translateX(-50%);
+}
+.editBlock.shown {
+  display: flex;
+}
+
+.editInput {
+  display: flex;
+  width: 80%;
+  min-height: 30px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid teal;
+}
+.editButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  min-height: 40px;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid teal;
+  cursor: pointer;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: inline-flex;
+  width: 30px;
+  height: 30px;
+  background-image: url("../../../img/211652_close_icon.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}

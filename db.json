@@ -1,0 +1,14 @@
+{
+  "users": [
+    {
+      "login": "hog123",
+      "password": "pooz",
+      "isLogged": true
+    },
+    {
+      "login": "jesus123",
+      "password": "123456",
+      "isLogged": true
+    }
+  ]
+}

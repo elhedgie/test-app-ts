@@ -1,0 +1,21 @@
+.itemBlock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 20px;
+  width: 100%;
+}
+
+.buttonBlock {
+  display: flex;
+  justify-content: end;
+  width: 50%;
+  column-gap: 10px;
+  margin-right: 0;
+}
+.infoBlock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+}

@@ -1,0 +1,34 @@
+.addContactBlock {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  margin-bottom: 30px;
+  margin-top: 5px;
+  padding: 20px 5px;
+  width: 100%;
+  min-height: 100px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.addInput {
+  display: flex;
+  width: 40%;
+  min-height: 30px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid teal;
+}
+
+.addBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  min-height: 40px;
+  background-color: teal;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
