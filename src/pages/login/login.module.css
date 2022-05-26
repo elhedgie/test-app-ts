@@ -36,15 +36,10 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  row-gap: 10px;
-  padding: 20px;
+  width: 70%;
+  margin: 0 auto;
+  row-gap: 1em;
+  padding: 2em;
 }
 
-.input {
-  display: flex;
-  width: 50%;
-  min-height: 30px;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid teal;
-}
+

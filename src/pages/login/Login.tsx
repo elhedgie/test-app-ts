@@ -9,6 +9,8 @@ import {
   logInSuccessful,
 } from "../../reducers/Action Creators/action creators";
 import Button from "../../common/Button/Button";
+import { ILogin } from "../../reducers/loginReducer";
+import Input from "../../common/Input/Input";
 
 export default function Login() {
   let dispatch = useAppDispatch();
@@ -23,15 +25,19 @@ export default function Login() {
   function logIn(e: React.MouseEvent<HTMLButtonElement>) {
     e.preventDefault();
     return () => {
-      fetch(
-        `http://localhost:3001/users?login=${loginState}&password=${passwordState}`
-      )
-        .then((res) => res.json())
-        .then((res) => checker(res))
-        .catch((error) => dispatch(logInFailed(error.message)));
-    };
+      if(loginState !== '' && passwordState !== '') {
+        fetch(
+          `http://localhost:3001/users?login=${loginState}&password=${passwordState}`
+        )
+          .then((res) => res.json())
+          .then((res) => checker(res))
+          .catch((error) => dispatch(logInFailed(error.message)));
+      } else {
+        alert('Введите пользователя')
+      }
+    }
   }
-  function checker(result: any[]) {
+  function checker(result: ILogin[]) {
     if (result.length !== 0) {
       localStorage.setItem("loggedIn", "true");
       dispatch(
@@ -43,8 +49,17 @@ export default function Login() {
       );
     } else {
       dispatch(logInFailed("Нет такого пользователя!"));
+      alert('Нет такого пользователя!')
     }
   }
+  // const formValidate = () => {
+  //   const loginForm = document.forms.form
+  //   const login = loginForm.login.value.trim()
+  //   const password = loginForm.password.value.trim()
+  //   if(login === '' || password === '') {
+
+  //   }
+  // }
   return auth ? (
     <Navigate to="/profile" />
   ) : (
@@ -59,18 +74,20 @@ export default function Login() {
       </nav>
       <div className={style.mainBlock}>
         <h1 className={style.headingOne}>Вход</h1>
-        <form className={style.form} action="">
-          <input
+        <form name="form" className={style.form} action="#">
+          <Input
             onChange={(e) => setLoginState(e.target.value)}
-            className={style.input}
             value={loginState}
             type="text"
+            placeholder="Ваш логин"
+            id="login"
           />
-          <input
+          <Input
             onChange={(e) => setPasswordState(e.target.value)}
-            className={style.input}
             value={passwordState}
             type="password"
+            placeholder="Ваш пароль"
+            id="password"
           />
           <Button
             type="submit"

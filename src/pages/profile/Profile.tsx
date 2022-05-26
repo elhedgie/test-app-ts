@@ -8,6 +8,7 @@ import AddForm from "./addForm/AddForm";
 import fetchContacts from "../fetchContacts";
 import Item from "./item/Item";
 import style from "./profile.module.css";
+import Input from "../../common/Input/Input";
 
 export default function Profile() {
   const [searchValue, setSearchValue] = useState("");
@@ -49,15 +50,14 @@ export default function Profile() {
         </Link>
       </nav>
       {loading ? (
-        <h1>Loading...</h1>
+        <h1 className={style.headingOne}>Loading...</h1>
       ) : (
         <div className={style.mainBlock}>
           <h1 className={style.headingOne}>Контакты</h1>
           <div className={style.contactBlock}>
-            <input
+            <Input
               onChange={(e) => searchFunc(e)}
               placeholder="Поиск по контактам"
-              className={style.inputSearch}
               type="text"
               value={searchValue}
             />

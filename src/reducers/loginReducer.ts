@@ -27,7 +27,7 @@ interface ActionLogout {
   payload: ILogin;
 }
 
-interface ILogin {
+export interface ILogin {
   id: null | string;
   login: null | string;
   password: null | string;
